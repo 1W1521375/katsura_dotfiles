@@ -16,13 +16,13 @@ ln -sf ~/dotfiles/.zsh/ ~/.zsh > /dev/null 2>&1
 ln -sf ~/dotfiles/.jupyter/ ~/.jupyter > /dev/null 2>&1
 
 # MySQL
-ln -sf ~/dotfiles/.my.cnf ~/.my.cnf > /dev/null 2>&1
+#ln -sf ~/dotfiles/.my.cnf ~/.my.cnf > /dev/null 2>&1
 
 # .bash_profile (Root権限なしリモートマシンの場合のみ)
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile > /dev/null 2>&1
 
 # ssh
-if [ -e {~/dotfiles/sbin/.ssh} ]; then
-    ln -sf ~/dotfiles/sbin/.ssh ~/.ssh > /dev/null 2>&1
-fi
+#if [ -e {~/dotfiles/sbin/.ssh} ]; then
+#    ln -sf ~/dotfiles/sbin/.ssh ~/.ssh > /dev/null 2>&1
+#fi
 
