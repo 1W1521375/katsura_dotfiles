@@ -1,0 +1,15 @@
+: "環境変数の設定" && {
+    PROMPT="%F{yellow}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
+}
+
+: "エイリアスの設定" && {
+    alias ls='ls --color'
+    alias vi='vim'
+    alias th='tmux split-window -h -p 50 -d'
+    alias tv='tmux split-window -v -p 25 -d'
+}
+
+
+: "Root権限がない環境での設定" && {
+    alias vim='~/.local/bin/vim/bin/vim'
+}

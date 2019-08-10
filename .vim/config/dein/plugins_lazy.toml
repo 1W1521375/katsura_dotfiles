@@ -1,0 +1,55 @@
+# ファイルオープンを便利に
+# [[plugins]]
+# repo = 'Shougo/unite.vim'
+
+# unite.vim を読み込んだら一緒に読み込む
+# [[plugins]]
+# repo      = 'Shougo/neomru.vim'
+# on_source = ['unite.vim']
+
+# Ruby向けにendを自動挿入してくれる
+# [[plugins]]
+# repo = 'tpope/vim-endwise'
+# on_ft = ['ruby']
+
+# Rails向けのコマンドを提供する
+# [[plugins]]
+# repo = 'tpope/vim-rails'
+# on_ft = ['ruby']
+# スニペットの補完機能
+
+# コードの自動補完
+[[plugins]]
+repo = 'Shougo/neocomplete'
+if = 'has("lua")'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+depends = ['neosnippet-snippets']
+on_event = 'InsertEnter'
+on_ft = ['snippet']
+
+#[[plugins]]
+#repo = "davidhalter/jedi-vim"
+#on_ft = ['python']
+#hook_add = '''
+#    autocmd FileType python setlocal completeopt-=preview
+#    let g:jedi#popup_select_first = 0
+#    let g:jedi#popup_on_dot = 0
+#    let g:jedi#show_call_signitures = 0
+#    let g:jedi#goto_command = "<leader>d"
+#    let g:jedi#goto_assignments_command = "<leader>g"
+#    let g:jedi#goto_definitions_command = ""
+#    let g:jedi#documentation_command = "K"
+#    let g:jedi#usages_command = "<leader>n"
+#    let g:jedi#rename_command = "<leader>R"
+#'''
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+on_ft = ['c++']
+
+[[plugins]]
+repo = 'justmao945/vim-clang'
+on_ft = ['c++']

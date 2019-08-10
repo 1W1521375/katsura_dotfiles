@@ -1,0 +1,23 @@
+: "環境変数の設定" && {
+    PROMPT="%F{blue}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
+    export PATH="$HOME/.pyenv/shims:$PATH"  # Python
+    export PATH="$HOME/.rbenv/bin:$PATH"    # Ruby
+    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi     # Ruby
+    export PATH="/usr/local/bin:$PATH"      # vimのPATH設定
+    export PATH="$HOME/dotfiles/sbin:$PATH"   # dotfiles/sbinのPATHを通す
+    export GCC_COLORS='error=1;31:warning=01;35:note=01;36:caret=01;32:locus=96:quote=96'       # gccのエラーコードの色設定
+    export PATH=$PATH:/usr/local/bin    #gcc-9
+}
+
+
+: "バグの解消" && {
+    disable r       # zshでrを起動した時のバグ解消
+}
+
+
+: "エイリアスの設定" && {
+    alias ls='ls -G'
+    alias ghc='stack ghc --'
+    alias ghci='stack ghci --'
+    alias runhaskell='stack runhaskell --'
+}

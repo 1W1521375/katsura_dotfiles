@@ -1,0 +1,54 @@
+: "環境変数の設定" && {
+    export LANG=ja_JP.UTF-8 # 言語設定
+    export LSCOLORS=cxfxcxdxbxegedabagacad  # lsで表示されるファイルの色設定
+    export PYENV_ROOT="$HOME/.pyenv" #pyenv
+    export PATH="$PYENV_ROOT/bin:$PATH" #pyenv
+    eval "$(pyenv init -)" #pyenv
+    eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
+    export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # pyenv-virtualenv
+}
+
+
+: "一般的な設定" && {
+    autoload -U compinit && compinit # 補完機能の強化
+    setopt correct # 入力しているコマンド名が間違っている場合にもしかして：を出す。
+    setopt nobeep # ビープを鳴らさない
+    setopt no_tify # バックグラウンドジョブが終了したらすぐに知らせる。
+    unsetopt auto_menu # タブによるファイルの順番切り替えをしない
+    setopt auto_pushd # cd -[tab]で過去のディレクトリにひとっ飛びできるようにする
+    setopt auto_cd # ディレクトリ名を入力するだけでcdできるようにする
+    setopt interactive_comments # コマンドラインでも # 以降をコメントと見なす
+    bindkey ";2C" end-of-line
+    bindkey ";2D" beginning-of-line
+}
+
+
+: "補完の設定" && {
+    #autoload -Uz compinit && compinit -u
+    #zstyle ':completion:*' menu select 1
+    #setopt menu_complete
+}
+
+: "ヒストリ関連の設定" && {
+    HISTFILE=$HOME/.zsh_history # ヒストリファイル名
+    HISTSIZE=10000 # メモリに保存される履歴の件数
+    SAVEHIST=10000 # 履歴ファイルに保存される履歴の件数
+    setopt hist_ignore_dups # 直前と同じコマンドをヒストリに追加しない
+    setopt hist_ignore_all_dups # 重複するコマンドは古い法を削除する
+    setopt share_history # 異なるウィンドウでコマンドヒストリを共有する
+    setopt hist_no_store # historyコマンドは履歴に登録しない
+    setopt hist_reduce_blanks # 余分な空白は詰めて記録
+    setopt hist_verify # `!!`を実行したときにいきなり実行せずコマンドを見せる
+}
+
+
+: "エイリアスの設定" && {
+    alias mv='mv -i'
+    alias cp='cp -i'
+    alias c='clear'
+    alias gs='git status'
+    alias vi='vim'
+    alias th='tmux split-window -h -p 25 -d'
+    alias tv='tmux split-window -v -p 25 -d'
+    alias jl='jupyter lab'
+}

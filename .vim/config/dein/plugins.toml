@@ -1,0 +1,46 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# スニペット集
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+#[[plugins]]
+#repo = 'ervandew/supertab'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+
+# powerline
+[[plugins]]
+repo = 'Lokaltog/vim-powerline'
+
+# Gitを便利に使う
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# インデントに色を付けて見やすくする
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+# 行末の半角スペースを可視化
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+# less用のsyntaxハイライト
+[[plugins]]
+repo = 'KohPoll/vim-less'
+
+# RubyMineのように自動保存する
+[[plugins]]
+repo = '907th/vim-auto-save'
+hook_post_source = '''
+  let g:auto_save = 1
+'''
