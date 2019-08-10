@@ -50,5 +50,6 @@
     alias vi='vim'
     alias th='tmux split-window -h -p 25 -d'
     alias tv='tmux split-window -v -p 25 -d'
+    alias tt=' tmux split-window -h -p 25 ; tmux split-window -v -p 25 ; tmux select-pane -t 0'
     alias jl='jupyter lab'
 }
