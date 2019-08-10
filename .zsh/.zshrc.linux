@@ -1,5 +1,13 @@
 : "環境変数の設定" && {
-    PROMPT="%F{yellow}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
+
+    if [ ! -z $TMUX ]; then
+        PROMPT="%F{yellow}(TMUX)[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
+    else
+        PROMPT="%F{yellow}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
+    fi
+
+
+
 }
 
 : "エイリアスの設定" && {
