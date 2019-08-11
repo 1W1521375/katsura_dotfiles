@@ -20,6 +20,7 @@
     setopt interactive_comments # コマンドラインでも # 以降をコメントと見なす
     bindkey ";2C" end-of-line
     bindkey ";2D" beginning-of-line
+    bindkey "\e[3~" delete-char # fn-delete
 }
 
 

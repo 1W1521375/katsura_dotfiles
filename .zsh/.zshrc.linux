@@ -5,9 +5,6 @@
     else
         PROMPT="%F{yellow}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
     fi
-
-
-
 }
 
 : "エイリアスの設定" && {
