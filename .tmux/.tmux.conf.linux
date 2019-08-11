@@ -1,17 +1,17 @@
-#set-option -g status off
+set-option -g status off
 
 set-window-option -g mode-keys vi
 set-window-option -g automatic-rename off
 
 # increase scroll buffer size
-#set-option -g history-limit 10000
+set-option -g history-limit 10000
 
 #set -s escape-time 0
 
 # 256色ターミナル
-#set-option -g default-terminal "screen-256color"
-set-option -g default-terminal "tmux-256color"
-#set-option -ga terminal-overrides ",xterm-256color:Tc"
+set-option -g default-terminal "screen-256color"
+#set-option -g default-terminal "tmux-256color"
+set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # mouse setting (ver 2.9)
 #set-option -g mouse on
@@ -23,18 +23,18 @@ set-option -g mouse-resize-pane on
 set-option -g mode-mouse on
 
 # status bar
-set -g status-left-length 32
-set -g status-right-length 150
+# set -g status-left-length 32
+# set -g status-right-length 150
 
-set -g status-fg white
-set -g status-bg colour234
+# set -g status-fg white
+# set -g status-bg colour234
 #set -g pane-border-style fg="white"
 # set -g pane-active-border-fg colour39
 #set -g pane-active-border-style fg="colour214"
 
-set -g status-left '#[fg=colour223,bg=colour202,bold]( ꒪⌓꒪) #(hostname -s)#[deafult] #S #[fg=colour202,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold] #(whoami) #[fg=colour238,bg=colour234,nobold]⮀'
-set -g window-status-format "#[fg=white,bg=colour234] #I #W "
-set -g window-status-current-format "#[fg=colour234,bg=colour39]⮀#[fg=colour25,bg=colour39,noreverse,bold] #I ⮁ #W #[fg=colour39,bg=colour234,bold]⮀"
+# set -g status-left '#[fg=colour223,bg=colour202,bold]( ꒪⌓꒪) #(hostname -s)#[deafult] #S #[fg=colour202,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold] #(whoami) #[fg=colour238,bg=colour234,nobold]⮀'
+# set -g window-status-format "#[fg=white,bg=colour234] #I #W "
+# set -g window-status-current-format "#[fg=colour234,bg=colour39]⮀#[fg=colour25,bg=colour39,noreverse,bold] #I ⮁ #W #[fg=colour39,bg=colour234,bold]⮀"
 # set -g status-right "#(wemux status_users)"
 #
 # 左部:whoami@hostname
@@ -42,4 +42,4 @@ set -g window-status-current-format "#[fg=colour234,bg=colour39]⮀#[fg=colour25
 # set -g status-left-length 20
 # 右部:[2011/03/06(Sun)20:21]
 #set -g status-right '#(battery -t)#(get_ssid_tmux)#[fg=colour31,bg=colour234,nobold]⮂#[fg=colour15,bg=colour31] Mem #(tmux-mem-cpu-load -a 0) #[fg=colour15,bg=colour31,bold]⮂#[fg=colour31,bg=colour15] %Y/%m/%d(%a)%H:%M#[default]'
-set -g status-right '#(~/dotfiles/.tmux/get_ssid_tmux)#[fg=colour31,bg=colour234,nobold]⮂#[fg=colour15,bg=colour31] Mem #(~/dotfiles/.tmux/tmux-mem-cpu-load -a 0) #[fg=colour15,bg=colour31,bold]⮂#[fg=colour31,bg=colour15] %Y/%m/%d(%a)%H:%M#[default]'
+# set -g status-right '#(~/dotfiles/.tmux/get_ssid_tmux)#[fg=colour31,bg=colour234,nobold]⮂#[fg=colour15,bg=colour31] Mem #(~/dotfiles/.tmux/tmux-mem-cpu-load -a 0) #[fg=colour15,bg=colour31,bold]⮂#[fg=colour31,bg=colour15] %Y/%m/%d(%a)%H:%M#[default]'
