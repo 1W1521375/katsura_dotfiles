@@ -9,9 +9,6 @@
 
 : "エイリアスの設定" && {
     alias ls='ls --color'
-    alias vi='vim'
-    alias th='tmux split-window -h -p 50 -d'
-    alias tv='tmux split-window -v -p 25 -d'
 }
 
 

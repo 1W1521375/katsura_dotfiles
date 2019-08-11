@@ -1,6 +1,5 @@
 : "環境変数の設定" && {
     PROMPT="%F{blue}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
-    export PATH="$HOME/.pyenv/shims:$PATH"  # Python
     export PATH="$HOME/.rbenv/bin:$PATH"    # Ruby
     if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi     # Ruby
     export PATH="/usr/local/bin:$PATH"      # vimのPATH設定
