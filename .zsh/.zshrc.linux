@@ -9,6 +9,9 @@
     export PATH=~/.anaconda3/bin:$PATH # anaconda3
     . ${HOME}/.anaconda3/etc/profile.d/conda.sh # anaconda3
     conda activate base # anaconda3
+
+    export PATH="/usr/local/cuda/bin:$PATH" # cuda
+    export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH" # cuda
 }
 
 : "エイリアスの設定" && {
@@ -17,5 +20,5 @@
 
 
 : "Root権限がない環境での設定" && {
-    alias vim='~/.local/bin/vim/bin/vim'
+    #alias vim='~/.local/bin/vim/bin/vim'
 }

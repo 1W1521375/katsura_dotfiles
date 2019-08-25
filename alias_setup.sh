@@ -4,6 +4,9 @@
 ln -sf ~/dotfiles/.vim ~/.vim > /dev/null 2>&1
 ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc > /dev/null 2>&1
 
+# Anaconda
+ln -sf ~/dotfiles/.condarc/ ~/.condarc > /dev/null 2>&1
+
 # tmux
 ln -sf ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf > /dev/null 2>&1
 ln -sf ~/dotfiles/.tmux ~/.tmux > /dev/null 2>&1
