@@ -5,6 +5,10 @@
     else
         PROMPT="%F{yellow}[${USER}@${HOST%%.*} %~]%(!.#.$)%f${reset_color} "      # プロンプトの設定
     fi
+
+    export PATH=~/.anaconda3/bin:$PATH # anaconda3
+    . ${HOME}/.anaconda3/etc/profile.d/conda.sh # anaconda3
+    conda activate base # anaconda3
 }
 
 : "エイリアスの設定" && {

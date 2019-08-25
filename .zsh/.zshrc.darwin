@@ -6,6 +6,12 @@
     export PATH="$HOME/dotfiles/sbin:$PATH"   # dotfiles/sbinのPATHを通す
     export GCC_COLORS='error=1;31:warning=01;35:note=01;36:caret=01;32:locus=96:quote=96'       # gccのエラーコードの色設定
     export PATH=$PATH:/usr/local/bin    #gcc-9
+    export PATH="$HOME/.pyenv/shims:$PATH"  # Python
+    export PYENV_ROOT="$HOME/.pyenv" #pyenv
+    export PATH="$PYENV_ROOT/bin:$PATH" #pyenv
+    eval "$(pyenv init -)" #pyenv
+    eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
+    export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # pyenv-virtualenv
 }
 
 
